@@ -1,11 +1,13 @@
 """Definitions of the base classes"""
 
+from typing import List
+
 
 class Submittable:
     """Base class for all main object types"""
     def __init__(self, **kwargs):
-        self.alias = kwargs.get("alias")
-        self.id = kwargs.get("id")
+        self.alias: str = kwargs.get("alias")
+        self.id: str = kwargs.get("id")
 
     def get_all_attributes(self):
         """Return a list of all attributes"""
@@ -21,8 +23,8 @@ class AccessionedSubmittable(Submittable):
     """An accessioned submittable contains an accession and description attribute."""
     def __init__(self, **kwargs):
         Submittable.__init__(self, **kwargs)
-        self.accession = kwargs.get("accession")
-        self.description = kwargs.get("description")
+        self.accession: str = kwargs.get("accession")
+        self.description: str = kwargs.get("description")
 
 
 class DependentSubmittable(Submittable):
@@ -30,4 +32,4 @@ class DependentSubmittable(Submittable):
     protocolrefs to describe the process of derivation."""
     def __init__(self, **kwargs):
         Submittable.__init__(self, **kwargs)
-        self.protocolrefs = kwargs.get("protocolrefs", [])
+        self.protocolrefs: List[str] = kwargs.get("protocolrefs", [])
