@@ -23,11 +23,6 @@ class Protocol(AccessionedSubmittable):
         self.software: str = kwargs.get("software")
         self.performer: str = kwargs.get("performer")
 
-    def __repr__(self):
-        return "{self.__class__.__name__}(alias={self.alias}, accession={self.accession}, " \
-               "description={self.description}, protocol_type={self.protocol_type}, " \
-               "hardware={self.hardware}, software={self.software}, performer={self.performer})".format(self=self)
-
     def get_ae_attributes(self):
         """Return a list of all AE attributes that have values."""
         all_attributes = self.__dict__.keys()

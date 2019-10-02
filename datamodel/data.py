@@ -34,11 +34,6 @@ class AssayData(DataSubmittable):
         self.assayrefs: List[str] = kwargs.get("assayrefs", [])
         self.accession: str = kwargs.get("accession")
 
-    def __repr__(self):
-        return "{self.__class__.__name__}(alias={self.alias}, files={self.files}, " \
-               "data_type={self.data_type}, assayrefs={self.assayrefs}, " \
-               "protocolrefs={self.protocolrefs}, accession={self.accession})".format(self=self)
-
 
 class Analysis(DataSubmittable):
     """
@@ -56,9 +51,3 @@ class Analysis(DataSubmittable):
         self.samplerefs: List[str] = kwargs.get("sampleref")
         self.assayrefs: List[str] = kwargs.get("assayrefs", [])
         self.assaydatarefs: List[str] = kwargs.get("assaydatarefs", [])
-
-    def __repr__(self):
-        return "{self.__class__.__name__}(alias={self.alias}, files={self.files}, " \
-               "data_type={self.data_type}, assaydatarefs={self.assaydatarefs}, samplerefs={self.samplerefs}, " \
-               "protocolrefs={self.protocolrefs})".format(self=self)
-

@@ -23,8 +23,3 @@ class Sample(AccessionedSubmittable):
         # Remove material type from attributes if already defined in main attribute
         if self.material_type and "material_type" in self.attributes:
             del self.attributes["material_type"]
-
-    def __repr__(self):
-        return "{self.__class__.__name__}(alias={self.alias}, accession={self.accession}, taxon={self.taxon}, " \
-               "taxonId={self.taxonId}, material_type={self.material_type}, description={self.description}, " \
-               "attributes={self.attributes})".format(self=self)

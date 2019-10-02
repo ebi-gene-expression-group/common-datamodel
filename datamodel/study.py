@@ -40,10 +40,3 @@ class Study(AccessionedSubmittable):
         self.related_experiment: List[str] = kwargs.get("related_experiment", [])
         self.comments: dict = kwargs.get("comments", {})
 
-    def __repr__(self):
-        return "{self.__class__.__name__}(alias={self.alias}, accession={self.accession}, title={self.title}, " \
-               "description={self.description}, protocolrefs={self.protocolrefs}, projectref={self.projectref}, " \
-               "experimental_factor={self.experimental_factor}, experimental_design={self.experimental_design}, " \
-               "experiment_type={self.experiment_type}, date_of_experiment={self.date_of_experiment}, " \
-               "submission_type={self.submission_type}, secondary_accession={self.secondary_accession}, " \
-               "related_experiment={self.related_experiment}, comments={self.comments})".format(self=self)

@@ -24,7 +24,3 @@ class Project(AccessionedSubmittable):
         self.publications: List[Publication] = [Publication(**p) for p in kwargs.get("publications", [])]
         self.contacts: List[Contact] = [Contact(**c) for c in kwargs.get("contacts", [])]
 
-    def __repr__(self):
-        return "{self.__class__.__name__}(alias={self.alias}, accession={self.accession}, " \
-               "releaseDate={self.releaseDate}, publications={self.publications}, " \
-               "contacts={self.contacts})".format(self=self)

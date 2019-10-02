@@ -3,7 +3,16 @@
 from typing import List
 
 
-class DataFile:
+class Component:
+    """The base component class, with the main purpose of adding a __repr__ function to all components"""
+
+    def __repr__(self):
+        """Generate a printable string with class name and attributes"""
+        return "{}({})".format(self.__class__.__name__,
+                               ", ".join(["{}={!r}".format(k, getattr(self, k)) for k in self.__dict__]))
+
+
+class DataFile(Component):
     """Attributes of a DataFile object
     :param name, string, file name
     :param checksum, string, checksum hash of the file
@@ -18,13 +27,8 @@ class DataFile:
         self.ftp_location: str = kwargs.get("ftp_location")
         self.read_type: str = kwargs.get("read_type")
 
-    def __repr__(self):
-        return "{self.__class__.__name__}(name={self.name}, checksum={self.checksum}, " \
-               "checksum_method={self.checksum_method}, ftp_location={self.ftp_location}, " \
-               "read={self.read_type})".format(self=self)
 
-
-class Contact:
+class Contact(Component):
     """Attributes of a contact
     :param firstName, string, person first name
     :param lastName, string, person last name
@@ -49,13 +53,8 @@ class Contact:
         self.fax: str = kwargs.get("fax")
         self.orcidId: str = kwargs.get("orcidId")
 
-    def __repr__(self):
-        return "{self.__class__.__name__}(firstName={self.firstName}, lastName={self.lastName}, email{self.email}, " \
-               "affiliation={self.affiliation}, address={self.address}, phone={self.phone}, roles={self.roles}, " \
-               "middleInitials={self.middleInitials}, fax={self.fax}, orcidId={self.orcidId})".format(self=self)
 
-
-class Publication:
+class Publication(Component):
     """Attributes of a publication
     :param articleTitle, string, title of the publication
     :param authors, string, list of the author names
@@ -70,12 +69,8 @@ class Publication:
         self.doi: str = kwargs.get("doi")
         self.publicationStatus: str = kwargs.get("publicationStatus")
 
-    def __repr__(self):
-        return "{self.__class__.__name__}(articleTitle={self.articleTitle}, authors={self.authors}, " \
-               "pubmedId={self.pubmedId}, doi={self.doi}, status={self.publicationStatus})".format(self=self)
 
-
-class Attribute:
+class Attribute(Component):
     """Attributes of an attribute
     :param value, string, the attribute value, e.g. ontology label
     :param unit, Unit class object describing the unit of the value
@@ -88,12 +83,8 @@ class Attribute:
         self.term_source: str = kwargs.get("term_source")
         self.term_accession: str = kwargs.get("term_accession")
 
-    def __repr__(self):
-        return "{self.__class__.__name__}(value={self.value}, unit={self.unit}, " \
-               "term_accession={self.term_accession}, term_source={self.term_source})".format(self=self)
 
-
-class Unit:
+class Unit(Component):
     """Attributes of a unit
     :param value, string, the unit term, e.g. hour
     :param unit_type, string, the type of unit, e.g. time unit
@@ -105,8 +96,3 @@ class Unit:
         self.unit_type: str = kwargs.get("unit_type")
         self.term_source: str = kwargs.get("term_source")
         self.term_accession: str = kwargs.get("term_accession")
-
-    def __repr__(self):
-        return "{self.__class__.__name__}(value={self.value}, unit_type={self.unit_type}, " \
-               "term_source={self.term_source}, term_accession={self.term_accession})".format(self=self)
-

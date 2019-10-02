@@ -11,6 +11,11 @@ class Submittable:
         """Return a list of all attributes"""
         return [k for k, v in self.__dict__.items() if not callable(v)]
 
+    def __repr__(self):
+        """Generate a printable string with class name and attributes"""
+        return "{}({})".format(self.__class__.__name__,
+                               ", ".join(["{}={!r}".format(k, getattr(self, k)) for k in self.get_all_attributes()]))
+
 
 class AccessionedSubmittable(Submittable):
     """An accessioned submittable contains an accession and description attribute."""

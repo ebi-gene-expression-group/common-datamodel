@@ -19,10 +19,6 @@ class Assay(DependentSubmittable):
         self.technology_type: str = kwargs.get("technology_type")
         self.sampleref: List[str] = kwargs.get("sampleref")
 
-    def __repr__(self):
-        return "{self.__class__.__name__}(alias={self.alias}, technology_type={self.technology_type}, " \
-               "protocolrefs={self.protocolrefs}, sampleref={self.sampleref})".format(self=self)
-
     def get_assay_attributes(self):
         """A list of all attributes that are specific to the assay object (not in the general assay class)"""
         exclude = ('id', 'alias', 'accession', 'protocolrefs', 'technology_type', 'sampleref')
@@ -46,11 +42,6 @@ class MicroarrayAssay(Assay):
         self.label: str = kwargs.get("label")
         self.array_design: str = kwargs.get("array_design")
 
-    def __repr__(self):
-        return "{self.__class__.__name__}(alias={self.alias}, technology_type={self.technology_type}, " \
-               "protocolrefs={self.protocolrefs}, sampleref={self.sampleref}, " \
-               "label={self.label}, array_design={self.array_design})".format(self=self)
-
 
 class SeqAssay(Assay):
     """
@@ -73,16 +64,6 @@ class SeqAssay(Assay):
         self.nominal_sdev: str = kwargs.get("nominal_sdev")
         self.platform_type: str = kwargs.get("platform_type")
         self.instrument_model: str = kwargs.get("instrument_model")
-
-    def __repr__(self):
-        return "{self.__class__.__name__}(alias={self.alias}, technology_type={self.technology_type}, " \
-               "protocolrefs={self.protocolrefs}, sampleref={self.sampleref} " \
-               "accession={self.accession}, library_layout={self.library_layout}, " \
-               "library_selection={self.library_selection}, library_strategy={self.library_strategy}, " \
-               "library_strand={self.library_strand}, library_source={self.library_source}," \
-               "orientation={self.orientation}, nominal_length={self.nominal_length}, " \
-               "nominal_sdev={self.nominal_sdev}, platform_type={self.platform_type}, " \
-               "instrument_model={self.instrument_model})".format(self=self)
 
 
 class SingleCellAssay(SeqAssay):
