@@ -450,7 +450,7 @@
     },
     "protocol_type": {
       "description": "experiment type ontology term",
-      "type": "Attribute",
+      "type": "attribute",
       "import": {
         "ae": {
           "path": [
@@ -618,7 +618,7 @@
             "attributes",
             "material_type"
           ],
-          "from_type": "Attribute",
+          "from_type": "attribute",
           "method": "get_string_from_attribute"
         },
         "hca": {
