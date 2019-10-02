@@ -1,7 +1,5 @@
 """The classes for the different assay types"""
 
-from typing import List
-
 from datamodel.submittable import DependentSubmittable
 
 
@@ -17,7 +15,7 @@ class Assay(DependentSubmittable):
     def __init__(self, **kwargs):
         DependentSubmittable.__init__(self, **kwargs)
         self.technology_type: str = kwargs.get("technology_type")
-        self.sampleref: List[str] = kwargs.get("sampleref")
+        self.sampleref: str = kwargs.get("sampleref")
 
     def get_assay_attributes(self):
         """A list of all attributes that are specific to the assay object (not in the general assay class)"""
