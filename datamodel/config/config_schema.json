@@ -4,10 +4,6 @@
   "description": "The mapping instructions used for JSON to data model conversion.",
   "version": "0.0.1",
   "properties": {
-    "submittables": {
-      "description": "The top level import instructions how to import the main JSON objects that map to the submittable classes, e.g. project, study, samples.",
-      "$ref": "#/definitions/mapping"
-    },
     "project": {
       "$ref": "#/definitions/mapping"
     },
