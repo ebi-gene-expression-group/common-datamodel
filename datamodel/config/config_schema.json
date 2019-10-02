@@ -56,57 +56,57 @@
       "type": "object",
       "patternProperties": {
         "^.*$": {
-        "description": "An attribute of the object to be imported/generated.",
-          "type": "object",
-        "required": [
-          "import"
-        ],
-        "properties": {
-          "description": {
-            "description": "The description of the attribute.",
-            "type": "string"
-          },
-          "type": {
-            "description": "The type of the output object, i.e. after conversion.",
-            "type": "string"
-          },
-          "items": {
-            "description": "The type of item in the array list. Required if type is 'array'.",
-            "type": "string"
-          },
-          "import": {
-            "description": "The import instructions for each specified mapping key.",
-            "patternProperties": {
-              "^.*$": {
-              "description": "The mapping key to locate the right import rules, e.g. ae, hca.",
-              "type": "object",
-              "required": [
-                "path",
-                "method"
-              ],
-              "properties": {
-                "path": {
-                  "description": "The elements that need to be traversed to locate the target object to import.",
-                  "type": "array"
-                },
-                "method": {
-                  "description": "The method the converter should apply to the target object.",
-                  "type": "string"
-                },
-                "from_type": {
-                  "description": "The type of the target object to import, e.g. string, array, object.",
-                  "type": "string"
+          "description": "An attribute of the object to be imported/generated.",
+            "type": "object",
+          "required": [
+            "import"
+          ],
+          "properties": {
+            "description": {
+              "description": "The description of the attribute.",
+              "type": "string"
+            },
+            "type": {
+              "description": "The type of the output object, i.e. after conversion.",
+              "type": "string"
+            },
+            "items": {
+              "description": "The type of item in the array list. Required if type is 'array'.",
+              "type": "string"
+            },
+            "translation": {
+              "description": "A dictionary to translate terms during conversion.",
+              "type": "object"
+            },
+            "import": {
+              "description": "The import instructions for each specified mapping key.",
+              "patternProperties": {
+                "^.*$": {
+                  "description": "The mapping key to locate the right import rules, e.g. ae, hca.",
+                  "type": "object",
+                  "required": [
+                    "path",
+                    "method"
+                  ],
+                  "properties": {
+                    "path": {
+                      "description": "The elements that need to be traversed to locate the target object to import.",
+                      "type": "array"
+                    },
+                    "method": {
+                      "description": "The method the converter should apply to the target object.",
+                      "type": "string"
+                    },
+                    "from_type": {
+                      "description": "The type of the target object to import, e.g. string, array, object.",
+                      "type": "string"
+                    }
+                  }
                 }
               }
-              }
             }
-          },
-          "translation": {
-            "description": "A dictionary to translate terms during conversion.",
-            "type": "object"
           }
         }
-      }
       }
     }
   }
