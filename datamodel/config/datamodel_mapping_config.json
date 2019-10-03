@@ -593,7 +593,7 @@
     },
     "taxonId": {
       "description": "NCBI taxonomy identifier for the species",
-      "type": "integer",
+      "type": "string",
       "import": {
         "ae": {
           "path": ["taxonId"],
