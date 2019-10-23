@@ -375,7 +375,7 @@
         "ae": {
           "path": [
             "attributes",
-            "related_experiment"
+            "related_study"
           ],
           "method": "get_string_from_attribute"
         }
@@ -1971,7 +1971,7 @@
       "import": {
         "ae": {
           "path": ["attributes", "read_type"],
-          "method": "import_string"
+          "method": "get_string_from_attribute"
         },
         "hca": {
           "path": [
