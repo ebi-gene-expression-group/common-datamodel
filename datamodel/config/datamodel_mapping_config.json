@@ -464,7 +464,17 @@
           "path": [
             "describedBy"
           ],
-          "method": "get_protocol_type"
+          "method": "get_protocol_type",
+          "translation": {
+            "aggregate_generation_protocol" : "aggregate generation protocol",
+            "collection_protocol" : "sample collection protocol",
+            "differentiation_protocol" : "differentiation protocol",
+            "dissociation_protocol" : "dissociation protocol",
+            "enrichment_protocol" : "enrichment protocol",
+            "ipsc_induction_protocol" : "iPSC induction protocol",
+            "library_preparation_protocol" : "nucleic acid library construction protocol",
+            "sequencing_protocol" : "nucleic acid sequencing protocol"
+            }
         }
       }
     },
