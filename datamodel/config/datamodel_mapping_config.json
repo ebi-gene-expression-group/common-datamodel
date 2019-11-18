@@ -1482,11 +1482,21 @@
     },
     "hca_bundle_uuid": {
       "type": "string",
-      "import": {}
+      "import": {
+        "hca": {
+          "path": [],
+          "method": "get_hca_bundle_uuid"
+        }
+      }
     },
     "hca_bundle_version": {
       "type": "string",
-      "import": {}
+      "import": {
+        "hca": {
+          "path": [],
+          "method": "get_hca_bundle_version"
+        }
+      }
     }
   },
   "assay_data": {
