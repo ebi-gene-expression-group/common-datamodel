@@ -243,6 +243,11 @@
           ],
           "from_type": "attribute_object",
           "method": "generate_attribute_from_json"
+        },
+        "hca": {
+          "path": [],
+          "method": "use_translation",
+          "translation": "single cell identifier"
         }
       }
     },
