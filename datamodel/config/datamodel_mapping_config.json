@@ -702,14 +702,14 @@
               "new key": "Characteristics[age]"
             },
             "donor_organism_1.is_living": {
-              "new key": "Characteristics[organism status]"
-            },
-            "specimen_from_organism_1.organ_parts": {
-              "new key": "Characteristics[organism part]",
+              "new key": "Characteristics[organism status]",
               "value translation": {
                 "yes": "alive",
                 "no": "dead"
               }
+            },
+            "specimen_from_organism_1.organ_parts": {
+              "new key": "Characteristics[organism part]"
             }
           }
         }
