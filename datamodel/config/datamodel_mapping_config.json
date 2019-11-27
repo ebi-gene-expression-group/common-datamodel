@@ -698,7 +698,7 @@
             "donor_organism_1.height": {
               "new key": "Characteristics[height]"
             },
-            "donor_organism_1.age": {
+            "donor_organism_1.organism_age": {
               "new key": "Characteristics[age]"
             },
             "donor_organism_1.is_living": {
@@ -706,7 +706,7 @@
             },
             "specimen_from_organism_1.organ_parts": {
               "new key": "Characteristics[organism part]",
-              "value": {
+              "value translation": {
                 "yes": "alive",
                 "no": "dead"
               }
