@@ -695,28 +695,24 @@
           "path": [],
           "method": "get_other_biomaterial_attributes",
           "translation": [{
-              "key": {
-                "donor_organism_1.height": "Characteristics[height]"
-              }
+              "original key": "donor_organism_1.height",
+              "new key": "Characteristics[height]"
             },
             {
-              "key": {
-                "donor_organism_1.age": "Characteristics[age]"
-              }
+              "original key": "donor_organism_1.age",
+              "new key": "Characteristics[age]"
             },
-            {
-              "key": {
-                "donor_organism_1.is_living": "Characteristics[organism status]"
-              },
+                        {
+              "original key": "donor_organism_1.is_living",
+              "new key": "Characteristics[organism status]",
               "value": {
                 "yes": "alive",
                 "no": "dead"
               }
             },
             {
-              "key": {
-                "specimen_from_organism_1.organ_parts": "Characteristics[organism part]"
-              }
+              "original key": "specimen_from_organism_1.organ_parts",
+              "new key": "Characteristics[organism part]"
             }
           ]
         }
