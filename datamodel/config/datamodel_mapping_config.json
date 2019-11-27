@@ -694,27 +694,24 @@
         "hca": {
           "path": [],
           "method": "get_other_biomaterial_attributes",
-          "translation": [{
-              "original key": "donor_organism_1.height",
+          "translation": {
+            "donor_organism_1.height": {
               "new key": "Characteristics[height]"
             },
-            {
-              "original key": "donor_organism_1.age",
+            "donor_organism_1.age": {
               "new key": "Characteristics[age]"
             },
-                        {
-              "original key": "donor_organism_1.is_living",
-              "new key": "Characteristics[organism status]",
+            "donor_organism_1.is_living": {
+              "new key": "Characteristics[organism status]"
+            },
+            "specimen_from_organism_1.organ_parts": {
+              "new key": "Characteristics[organism part]",
               "value": {
                 "yes": "alive",
                 "no": "dead"
               }
-            },
-            {
-              "original key": "specimen_from_organism_1.organ_parts",
-              "new key": "Characteristics[organism part]"
             }
-          ]
+          }
         }
       }
     }
