@@ -243,6 +243,11 @@
           ],
           "from_type": "attribute_object",
           "method": "generate_attribute_from_json"
+        },
+        "hca": {
+          "path": [],
+          "method": "use_translation",
+          "translation": "single cell identifier"
         }
       }
     },
@@ -357,7 +362,7 @@
       "description": "The accession number for the same study in another archive",
       "type": "array",
       "items": "string",
-      "import":{
+      "import": {
         "ae": {
           "path": [
             "attributes",
@@ -466,15 +471,37 @@
           ],
           "method": "get_protocol_type",
           "translation": {
-            "aggregate_generation_protocol" : {"value": "aggregate generation protocol"},
-            "collection_protocol" : {"value": "sample collection protocol", "term_accession": "EFO:0005518", "term_source": "EFO"},
-            "differentiation_protocol" : {"value": "differentiation protocol"},
-            "dissociation_protocol" : {"value": "dissociation protocol"},
-            "enrichment_protocol" : {"value" : "enrichment protocol"},
-            "ipsc_induction_protocol" : {"value": "iPSC induction protocol"},
-            "library_preparation_protocol" : {"value": "nucleic acid library construction protocol", "term_accession": "EFO:0004184", "term_source":"EFO"},
-            "sequencing_protocol" : {"value": "nucleic acid sequencing protocol", "term_accession": "EFO:0004170", "term_source":"EFO"}
+            "aggregate_generation_protocol": {
+              "value": "aggregate generation protocol"
+            },
+            "collection_protocol": {
+              "value": "sample collection protocol",
+              "term_accession": "EFO:0005518",
+              "term_source": "EFO"
+            },
+            "differentiation_protocol": {
+              "value": "differentiation protocol"
+            },
+            "dissociation_protocol": {
+              "value": "dissociation protocol"
+            },
+            "enrichment_protocol": {
+              "value": "enrichment protocol"
+            },
+            "ipsc_induction_protocol": {
+              "value": "iPSC induction protocol"
+            },
+            "library_preparation_protocol": {
+              "value": "nucleic acid library construction protocol",
+              "term_accession": "EFO:0004184",
+              "term_source": "EFO"
+            },
+            "sequencing_protocol": {
+              "value": "nucleic acid sequencing protocol",
+              "term_accession": "EFO:0004170",
+              "term_source": "EFO"
             }
+          }
         }
       }
     },
@@ -666,7 +693,25 @@
         },
         "hca": {
           "path": [],
-          "method": "get_other_biomaterial_attributes"
+          "method": "get_other_biomaterial_attributes",
+          "translation": {
+            "donor_organism_1.height": {
+              "new key": "Characteristics[height]"
+            },
+            "donor_organism_1.organism_age": {
+              "new key": "Characteristics[age]"
+            },
+            "donor_organism_1.is_living": {
+              "new key": "Characteristics[organism status]",
+              "value translation": {
+                "yes": "alive",
+                "no": "dead"
+              }
+            },
+            "specimen_from_organism_1.organ_parts": {
+              "new key": "Characteristics[organism part]"
+            }
+          }
         }
       }
     }
