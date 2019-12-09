@@ -385,6 +385,62 @@
           "method": "get_string_from_attribute"
         }
       }
+    },
+    "ea_curator": {
+      "description": "Name of Expression Atlas curator",
+      "type": "array",
+      "items": "string",
+      "import": {
+        "ae": {
+          "path": [
+            "attributes",
+            "ea_curator"
+          ],
+          "method": "get_string_from_attribute"
+        }
+      }
+    },
+    "ea_experiment_type": {
+      "description": "Single Cell Expression Atlas analysis type",
+      "type": "array",
+      "items": "string",
+      "import": {
+        "ae": {
+          "path": [
+            "attributes",
+            "ea_experiment_type"
+          ],
+          "method": "get_string_from_attribute"
+        }
+      }
+    },
+    "ea_additional_attributes": {
+      "description": "Attribute names to be visualised in single cell plot",
+      "type": "array",
+      "items": "string",
+      "import": {
+        "ae": {
+          "path": [
+            "attributes",
+            "ea_additional_attributes"
+          ],
+          "method": "get_string_from_attribute"
+        }
+      }
+    },
+    "ea_expected_clusters": {
+      "description": "Number of cell clusters expected in a single cell experiment",
+      "type": "array",
+      "items": "string",
+      "import": {
+        "ae": {
+          "path": [
+            "attributes",
+            "ea_expected_clusters"
+          ],
+          "method": "get_string_from_attribute"
+        }
+      }
     }
   },
   "protocol": {

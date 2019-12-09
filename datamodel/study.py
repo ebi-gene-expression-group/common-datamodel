@@ -22,6 +22,10 @@ class Study(AccessionedSubmittable):
     :param submission_type: string, submission type (microarray, sequencing, singlecell)
     :param secondary_accession: list, accession of the same study in another archive (e.g. ENA)
     :param related_experiment: list, accession of experiments related to this study
+    :param ea_curator: list, name of Expression Atlas curator
+    :param ea_experiment_type: list, Single Cell Expression Atlas analysis type
+    :param ea_additional_attributes: list, attribute names to be visualised in single cell plot
+    :param ea_expected_clusters: list, number of cell clusters expected in a single cell experiment
     :param comments: dictionary, (optional) known IDF comments
                     keys: string, comment category
                     values: list, comment values
@@ -38,5 +42,9 @@ class Study(AccessionedSubmittable):
         self.submission_type: str = kwargs.get("submission_type")
         self.secondary_accession: List[str] = kwargs.get("secondary_accession", [])
         self.related_experiment: List[str] = kwargs.get("related_experiment", [])
+        self.ea_curator: List[str] = kwargs.get("ea_curator", [])
+        self.ea_experiment_type: List[str] = kwargs.get("ea_experiment_type", [])
+        self.ea_additional_attributes: List[str] = kwargs.get("ea_additional_attributes", [])
+        self.ea_expected_clusters: List[str] = kwargs.get("ea_expected_clusters", [])
         self.comments: dict = kwargs.get("comments", {})
 
