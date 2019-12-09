@@ -1254,6 +1254,8 @@
             "10X v2 sequencing": "10x",
             "enzymatic dissociation": "enzymatic dissociation",
             "mechanical dissociation": "mechanical dissociation",
+            "density gradient centrifugation": "density gradient centrifugation",
+            "sample dissociation": "null",
             "None": "null"
           }
         }
