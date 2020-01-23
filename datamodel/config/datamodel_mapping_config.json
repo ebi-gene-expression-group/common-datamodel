@@ -273,6 +273,9 @@
       "type": "array",
       "items": "attribute",
       "import": {
+        "annotare": {
+          "path": []
+        },
         "ae": {
           "path": [
             "attributes",
@@ -293,6 +296,10 @@
       "type": "array",
       "items": "attribute",
       "import": {
+        "annotare": {
+          "path": ["experimentalDesigns"],
+          "method": "attribute_from_annotare_term"
+        },
         "ae": {
           "path": [
             "attributes",
@@ -308,6 +315,10 @@
       "type": "array",
       "items": "string",
       "import": {
+        "annotare": {
+          "path": ["aeExperimentType"],
+          "method": "list_from_single_string"
+        },
         "ae": {
           "path": [
             "attributes",
@@ -327,6 +338,10 @@
       "description": "(optional) date of experiment",
       "type": "string",
       "import": {
+        "annotare": {
+          "path": ["experimentDate"],
+          "method": "date_from_unixtime"
+        },
         "ae": {
           "path": [
             "attributes",
@@ -365,6 +380,10 @@
       "type": "array",
       "items": "string",
       "import": {
+        "annotare": {
+          "path": ["protocols"],
+          "method": "gather_protocolrefs"
+        },
         "ae": {
           "path": ["protocolRefs"],
           "from_type": "array",
@@ -380,6 +399,37 @@
       "description": "submission type: microarray, sequencing, singlecell",
       "type": "string",
       "import": {
+        "annotare": {
+          "path": ["type"],
+          "method": "import_string",
+          "translation": {
+            "ONE_COLOR_MICROARRAY": "microarray",
+            "TWO_COLOR_MICROARRAY": "microarray",
+            "METHYLATION_MICROARRAY": "microarray",
+            "SEQUENCING": "sequencing",
+            "SINGLE_CELL_SEQUENCING": "singlecell",
+            "PLANT_ONE_COLOR_MICROARRAY": "microarray",
+            "PLANT_TWO_COLOR_MICROARRAY": "microarray",
+            "PLANT_METHYLATION_MICROARRAY": "microarray",
+            "PLANT_SEQUENCING": "sequencing",
+            "SINGLE_CELL_PLANT_SEQUENCING": "singlecell",
+            "HUMAN_ONE_COLOR_MICROARRAY": "microarray",
+            "HUMAN_TWO_COLOR_MICROARRAY": "microarray",
+            "HUMAN_METHYLATION_MICROARRAY": "microarray",
+            "HUMAN_SEQUENCING": "sequencing",
+            "SINGLE_CELL_HUMAN_SEQUENCING": "singlecell",
+            "ANIMAL_ONE_COLOR_MICROARRAY": "microarray",
+            "ANIMAL_TWO_COLOR_MICROARRAY": "microarray",
+            "ANIMAL_METHYLATION_MICROARRAY": "microarray",
+            "ANIMAL_SEQUENCING": "sequencing",
+            "SINGLE_CELL_ANIMAL_SEQUENCING": "singlecell",
+            "CELL_LINE_ONE_COLOR_MICROARRAY": "microarray",
+            "CELL_LINE_TWO_COLOR_MICROARRAY": "microarray",
+            "CELL_LINE_METHYLATION_MICROARRAY": "microarray",
+            "CELL_LINE_SEQUENCING": "sequencing",
+            "SINGLE_CELL_CELL_LINE_SEQUENCING": "singlecell"
+          }
+        },
         "ae": {
           "path": [
             "attributes",
@@ -414,6 +464,11 @@
       "type": "array",
       "items": "string",
       "import": {
+        "annotare": {
+          "path": ["relatedAccessionNumber"],
+          "method": "list_from_separated_string",
+          "translation": ","
+        },
         "ae": {
           "path": [
             "attributes",
@@ -485,6 +540,10 @@
       "description": "UUID of the protocol submittable",
       "type": "string",
       "import": {
+        "annotare": {
+          "path": ["id"],
+          "method": "import_string"
+        },
         "ae": {
           "path": ["id"],
           "from_type": "string",
@@ -496,6 +555,10 @@
       "description": "protocol accession or unique name in experiment",
       "type": "string",
       "import": {
+        "annotare": {
+          "path": ["name"],
+          "method": "import_string"
+        },
         "ae": {
           "path": ["alias"],
           "from_type": "string",
@@ -532,6 +595,10 @@
       "description": "free-text description of protocol",
       "type": "string",
       "import": {
+        "annotare": {
+          "path": ["description"],
+          "method": "import_string"
+        },
         "ae": {
           "path": ["description"],
           "from_type": "string",
@@ -550,6 +617,10 @@
       "description": "experiment type ontology term",
       "type": "attribute",
       "import": {
+        "annotare": {
+          "path": ["type"],
+          "method": "attribute_from_annotare_term"
+        },
         "ae": {
           "path": [
             "attributes",
@@ -602,6 +673,10 @@
       "description": "free-text hardware description, sequencer model for sequencing experiments",
       "type": "string",
       "import": {
+        "annotare": {
+          "path": ["hardware"],
+          "method": "import_string"
+        },
         "ae": {
           "path": [
             "attributes",
@@ -623,6 +698,10 @@
       "description": "free-text software description",
       "type": "string",
       "import": {
+        "annotare": {
+          "path": ["software"],
+          "method": "import_string"
+        },
         "ae": {
           "path": [
             "attributes",
@@ -637,6 +716,10 @@
       "description": "performer of the protocol",
       "type": "string",
       "import": {
+        "annotare": {
+          "path": ["performer"],
+          "method": "import_string"
+        },
         "ae": {
           "path": [
             "attributes",
