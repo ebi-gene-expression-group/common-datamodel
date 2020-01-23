@@ -380,10 +380,6 @@
       "type": "array",
       "items": "string",
       "import": {
-        "annotare": {
-          "path": ["protocols"],
-          "method": "gather_protocolrefs"
-        },
         "ae": {
           "path": ["protocolRefs"],
           "from_type": "array",
@@ -743,6 +739,10 @@
       "description": "UUID of the sample submittable",
       "type": "string",
       "import": {
+        "annotare": {
+          "path": ["id"],
+          "method": "import_string"
+        },
         "ae": {
           "path": ["id"],
           "from_type": "string",
@@ -754,6 +754,10 @@
       "description": "sample name or alias",
       "type": "string",
       "import": {
+        "annotare": {
+          "path": ["name"],
+          "method": "import_string"
+        },
         "ae": {
           "path": ["alias"],
           "from_type": "string",
@@ -862,6 +866,10 @@
       "description": "dictionary of attribute categories as keys and Attribute class object as value",
       "type": "object",
       "import": {
+        "annotare": {
+          "path": ["values"],
+          "method": "generate_annotare_sample_attribute"
+        },
         "ae": {
           "path": ["attributes"],
           "from_type": "array",
