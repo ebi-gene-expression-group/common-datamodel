@@ -274,7 +274,8 @@
       "items": "attribute",
       "import": {
         "annotare": {
-          "path": []
+          "path": [],
+          "method": "gather_experimental_factors"
         },
         "ae": {
           "path": [
@@ -909,6 +910,11 @@
           "path": ["id"],
           "from_type": "string",
           "method": "import_string"
+        },
+        "annotare": {
+          "path": ["id"],
+          "from_type": "string",
+          "method": "import_string"
         }
       }
     },
@@ -918,6 +924,11 @@
       "import": {
         "ae": {
           "path": ["alias"],
+          "from_type": "string",
+          "method": "import_string"
+        },
+        "annotare": {
+          "path": ["le_name"],
           "from_type": "string",
           "method": "import_string"
         }
@@ -934,6 +945,14 @@
           ],
           "from_type": "string",
           "method": "get_string_from_attribute"
+        },
+        "annotare": {
+          "path": [],
+          "from_type": "string",
+          "method": "use_default",
+          "translation": {
+            "default": "array assay"
+          }
         }
       }
     },
@@ -957,6 +976,11 @@
           "path": ["sampleUses"],
           "from_type": "array",
           "method": "get_reference_usage"
+        },
+        "annotare": {
+          "path": ["sampleRef"],
+          "from_type": "string",
+          "method": "import_string"
         }
       }
     },
@@ -971,6 +995,11 @@
           ],
           "from_type": "string",
           "method": "get_string_from_attribute"
+        },
+        "annotare": {
+          "path": ["label_name"],
+          "from_type": "string",
+          "method": "import_string"
         }
       }
     },
@@ -986,6 +1015,11 @@
           ],
           "from_type": "string",
           "method": "get_string_from_attribute"
+        },
+        "annotare": {
+          "path": ["array_design"],
+          "from_type": "string",
+          "method": "import_string"
         }
       }
     }
