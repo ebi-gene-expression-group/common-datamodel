@@ -1033,6 +1033,11 @@
           "path": ["id"],
           "from_type": "string",
           "method": "import_string"
+        },
+        "annotare": {
+          "path": ["id"],
+          "from_type": "string",
+          "method": "import_string"
         }
       }
     },
@@ -1044,6 +1049,11 @@
           "path": [
             "alias"
           ],
+          "from_type": "string",
+          "method": "import_string"
+        },
+        "annotare": {
+          "path": ["name"],
           "from_type": "string",
           "method": "import_string"
         }
@@ -1070,6 +1080,14 @@
           ],
           "from_type": "string",
           "method": "get_string_from_attribute"
+        },
+        "annotare": {
+          "path": [],
+          "from_type": "string",
+          "method": "use_default",
+          "translation": {
+            "default": "sequencing assay"
+          }
         }
       }
     },
@@ -1093,6 +1111,11 @@
           "path": ["sampleUses"],
           "from_type": "array",
           "method": "get_reference_usage"
+        },
+        "annotare": {
+          "path": ["sampleRef"],
+          "from_type": "string",
+          "method": "import_string"
         }
       }
     },
@@ -1103,6 +1126,11 @@
         "ae": {
           "path": ["attributes", "library_layout"],
           "method": "get_string_from_attribute"
+        },
+        "annotare": {
+          "path": ["attributeValues", "LIBRARY_LAYOUT"],
+          "from_type": "string",
+          "method": "import_string"
         }
       }
     },
@@ -1113,6 +1141,11 @@
         "ae": {
           "path": ["attributes", "library_source"],
           "method": "get_string_from_attribute"
+        },
+        "annotare": {
+          "path": ["attributeValues", "LIBRARY_SOURCE"],
+          "from_type": "string",
+          "method": "import_string"
         }
       }
     },
@@ -1123,6 +1156,11 @@
         "ae": {
           "path": ["attributes", "library_strategy"],
           "method": "get_string_from_attribute"
+        },
+        "annotare": {
+          "path": ["attributeValues", "LIBRARY_STRATEGY"],
+          "from_type": "string",
+          "method": "import_string"
         }
       }
     },
@@ -1133,6 +1171,11 @@
         "ae": {
           "path": ["attributes", "library_selection"],
           "method": "get_string_from_attribute"
+        },
+        "annotare": {
+          "path": ["attributeValues", "LIBRARY_SELECTION"],
+          "from_type": "string",
+          "method": "import_string"
         }
       }
     },
@@ -1143,6 +1186,11 @@
         "ae": {
           "path": ["attributes", "nominal_length"],
           "method": "get_string_from_attribute"
+        },
+        "annotare": {
+          "path": ["attributeValues", "NOMINAL_LENGTH"],
+          "from_type": "string",
+          "method": "import_string"
         }
       }
     },
@@ -1153,6 +1201,11 @@
         "ae": {
           "path": ["attributes", "nominal_sdev"],
           "method": "get_string_from_attribute"
+        },
+        "annotare": {
+          "path": ["attributeValues", "NOMINAL_SDEV"],
+          "from_type": "string",
+          "method": "import_string"
         }
       }
     },
@@ -1163,6 +1216,11 @@
         "ae": {
           "path": ["attributes", "orientation"],
           "method": "get_string_from_attribute"
+        },
+        "annotare": {
+          "path": ["attributeValues", "ORIENTATION"],
+          "from_type": "string",
+          "method": "import_string"
         }
       }
     },
@@ -1193,6 +1251,11 @@
         "ae": {
           "path": ["attributes", "library_strand"],
           "method": "get_string_from_attribute"
+        },
+        "annotare": {
+          "path": ["attributeValues", "LIBRARY_STRAND"],
+          "from_type": "string",
+          "method": "import_string"
         }
       }
     }
@@ -1203,6 +1266,11 @@
       "type": "string",
       "import": {
         "ae": {
+          "path": ["id"],
+          "from_type": "string",
+          "method": "import_string"
+        },
+        "annotare": {
           "path": ["id"],
           "from_type": "string",
           "method": "import_string"
@@ -1221,6 +1289,11 @@
         "hca": {
           "path": [],
           "method": "get_hca_bundle_uuid"
+        },
+        "annotare": {
+          "path": ["name"],
+          "from_type": "string",
+          "method": "import_string"
         }
       }
     },
@@ -1251,6 +1324,14 @@
           "path": [],
           "method": "use_translation",
           "translation": "sequencing assay"
+        },
+        "annotare": {
+          "path": [],
+          "from_type": "string",
+          "method": "use_default",
+          "translation": {
+            "default": "sequencing assay"
+          }
         }
       }
     },
@@ -1283,6 +1364,11 @@
         "hca": {
           "path": [],
           "method": "placeholder"
+        },
+        "annotare": {
+          "path": ["sampleRef"],
+          "from_type": "string",
+          "method": "import_string"
         }
       }
     },
@@ -1301,6 +1387,11 @@
             "True": "PAIRED",
             "False": "SINGLE"
           }
+        },
+        "annotare": {
+          "path": ["attributeValues", "LIBRARY_LAYOUT"],
+          "from_type": "string",
+          "method": "import_string"
         }
       }
     },
@@ -1316,6 +1407,11 @@
           "path": [],
           "method": "use_translation",
           "translation": "transcriptomic single cell"
+        },
+        "annotare": {
+          "path": ["attributeValues", "LIBRARY_SOURCE"],
+          "from_type": "string",
+          "method": "import_string"
         }
       }
     },
@@ -1331,6 +1427,11 @@
           "path": [],
           "method": "use_translation",
           "translation": "RNA-Seq"
+        },
+        "annotare": {
+          "path": ["attributeValues", "LIBRARY_STRATEGY"],
+          "from_type": "string",
+          "method": "import_string"
         }
       }
     },
@@ -1346,6 +1447,11 @@
           "path": [],
           "method": "use_translation",
           "translation": "cDNA"
+        },
+        "annotare": {
+          "path": ["attributeValues", "LIBRARY_SELECTION"],
+          "from_type": "string",
+          "method": "import_string"
         }
       }
     },
@@ -1362,6 +1468,11 @@
             "library_preparation_protocol_json",
             "nominal_length"
           ],
+          "method": "import_string"
+        },
+        "annotare": {
+          "path": ["attributeValues", "NOMINAL_LENGTH"],
+          "from_type": "string",
           "method": "import_string"
         }
       }
@@ -1380,6 +1491,11 @@
             "nominal_sdev"
           ],
           "method": "import_string"
+        },
+        "annotare": {
+          "path": ["attributeValues", "NOMINAL_SDEV"],
+          "from_type": "string",
+          "method": "import_string"
         }
       }
     },
@@ -1390,6 +1506,11 @@
         "ae": {
           "path": ["attributes", "orientation"],
           "method": "get_string_from_attribute"
+        },
+        "annotare": {
+          "path": ["attributeValues", "ORIENTATION"],
+          "from_type": "string",
+          "method": "import_string"
         }
       }
     },
@@ -1449,6 +1570,11 @@
             "second": "second strand",
             "not provided": "not provided"
           }
+        },
+        "annotare": {
+          "path": ["attributeValues", "LIBRARY_STRAND"],
+          "from_type": "string",
+          "method": "import_string"
         }
       }
     },
@@ -1474,6 +1600,11 @@
             "mechanical dissociation": "mechanical dissociation",
             "None": "null"
           }
+        },
+        "annotare": {
+          "path": ["singleCellAttributeValues", "SINGLE_CELL_ISOLATION"],
+          "from_type": "string",
+          "method": "import_string"
         }
       }
     },
@@ -1491,6 +1622,11 @@
             "library_construction_method",
             "ontology_label"
           ],
+          "method": "import_string"
+        },
+        "annotare": {
+          "path": ["singleCellAttributeValues", "LIBRARY_CONSTRUCTION"],
+          "from_type": "string",
           "method": "import_string"
         }
       }
@@ -1510,6 +1646,11 @@
             "ontology_label"
           ],
           "method": "import_string"
+        },
+        "annotare": {
+          "path": ["singleCellAttributeValues", "INPUT_MOLECULE"],
+          "from_type": "string",
+          "method": "import_string"
         }
       }
     },
@@ -1520,6 +1661,11 @@
         "ae": {
           "path": ["attributes", "end_bias"],
           "method": "get_string_from_attribute"
+        },
+        "annotare": {
+          "path": ["singleCellAttributeValues", "END_BIAS"],
+          "from_type": "string",
+          "method": "import_string"
         }
       }
     },
@@ -1536,6 +1682,11 @@
             "library_preparation_protocol_json",
             "end_bias"
           ],
+          "method": "import_string"
+        },
+        "annotare": {
+          "path": ["singleCellAttributeValues", "PRIMER"],
+          "from_type": "string",
           "method": "import_string"
         }
       }
@@ -1555,6 +1706,11 @@
             "ontology_label"
           ],
           "method": "import_string"
+        },
+        "annotare": {
+          "path": ["singleCellAttributeValues", "SPIKE_IN"],
+          "from_type": "string",
+          "method": "import_string"
         }
       }
     },
@@ -1571,6 +1727,11 @@
             "library_preparation_protocol_json",
             "spike_in_dilution"
           ],
+          "method": "import_string"
+        },
+        "annotare": {
+          "path": ["singleCellAttributeValues", "SPIKE_IN_DILUTION"],
+          "from_type": "string",
           "method": "import_string"
         }
       }
@@ -1590,6 +1751,11 @@
             "barcode_read"
           ],
           "method": "import_string"
+        },
+        "annotare": {
+          "path": ["singleCellAttributeValues", "UMI_BARCODE_READ"],
+          "from_type": "string",
+          "method": "import_string"
         }
       }
     },
@@ -1607,6 +1773,11 @@
             "umi_barcode",
             "barcode_length"
           ],
+          "method": "import_string"
+        },
+        "annotare": {
+          "path": ["singleCellAttributeValues", "UMI_BARCODE_SIZE"],
+          "from_type": "string",
           "method": "import_string"
         }
       }
@@ -1626,6 +1797,11 @@
             "barcode_offset"
           ],
           "method": "import_string"
+        },
+        "annotare": {
+          "path": ["singleCellAttributeValues", "UMI_BARCODE_OFFSET"],
+          "from_type": "string",
+          "method": "import_string"
         }
       }
     },
@@ -1643,6 +1819,11 @@
             "cell_barcode",
             "barcode_read"
           ],
+          "method": "import_string"
+        },
+        "annotare": {
+          "path": ["singleCellAttributeValues", "CELL_BARCODE_READ"],
+          "from_type": "string",
           "method": "import_string"
         }
       }
@@ -1662,6 +1843,11 @@
             "barcode_length"
           ],
           "method": "import_string"
+        },
+        "annotare": {
+          "path": ["singleCellAttributeValues", "CELL_BARCODE_SIZE"],
+          "from_type": "string",
+          "method": "import_string"
         }
       }
     },
@@ -1680,6 +1866,11 @@
             "barcode_offset"
           ],
           "method": "import_string"
+        },
+        "annotare": {
+          "path": ["singleCellAttributeValues", "CELL_BARCODE_OFFSET"],
+          "from_type": "string",
+          "method": "import_string"
         }
       }
     },
@@ -1690,6 +1881,11 @@
         "ae": {
           "path": ["attributes", "cDNA_read"],
           "method": "get_string_from_attribute"
+        },
+        "annotare": {
+          "path": ["singleCellAttributeValues", "CDNA_READ"],
+          "from_type": "string",
+          "method": "import_string"
         }
       }
     },
@@ -1700,6 +1896,11 @@
         "ae": {
           "path": ["attributes", "cDNA_read_offset"],
           "method": "get_string_from_attribute"
+        },
+        "annotare": {
+          "path": ["singleCellAttributeValues", "CDNA_READ_OFFSET"],
+          "from_type": "string",
+          "method": "import_string"
         }
       }
     },
@@ -1710,6 +1911,11 @@
         "ae": {
           "path": ["attributes", "cDNA_read_size"],
           "method": "get_string_from_attribute"
+        },
+        "annotare": {
+          "path": ["singleCellAttributeValues", "CDNA_READ_SIZE"],
+          "from_type": "string",
+          "method": "import_string"
         }
       }
     },
@@ -1720,6 +1926,11 @@
         "ae": {
           "path": ["attributes", "sample_barcode_read"],
           "method": "get_string_from_attribute"
+        },
+        "annotare": {
+          "path": ["singleCellAttributeValues", "SAMPLE_BARCODE_READ"],
+          "from_type": "string",
+          "method": "import_string"
         }
       }
     },
@@ -1730,6 +1941,11 @@
         "ae": {
           "path": ["attributes", "sample_barcode_size"],
           "method": "get_string_from_attribute"
+        },
+        "annotare": {
+          "path": ["singleCellAttributeValues", "SAMPLE_BARCODE_SIZE"],
+          "from_type": "string",
+          "method": "import_string"
         }
       }
     },
@@ -1740,6 +1956,11 @@
         "ae": {
           "path": ["attributes", "sample_barcode_offset"],
           "method": "get_string_from_attribute"
+        },
+        "annotare": {
+          "path": ["singleCellAttributeValues", "SAMPLE_BARCODE_OFFSET"],
+          "from_type": "string",
+          "method": "import_string"
         }
       }
     },
